@@ -21,16 +21,17 @@
     <a href="#" class="logo">
       <img src="./images/logo.svg" alt="Fylo Logo">
     </a>
-    <a href="#" class="icon-link">
-      <img src="./images/icon-document.svg" class="icon-symbol" alt="new document">
-    </a>
-    <a href="#" class="icon-link">
-      <img src="./images/icon-folder.svg" class="icon-symbol" alt="folder">
-    </a>
-    <a href="#" class="icon-link">
-      <img src="./images/icon-upload.svg" class="icon-symbol" alt="upload">
-    </a>
-
+    <div class="icons">
+      <a href="#" class="icon-link">
+        <img src="./images/icon-document.svg" class="icon-symbol" alt="new document">
+      </a>
+      <a href="#" class="icon-link">
+        <img src="./images/icon-folder.svg" class="icon-symbol" alt="folder">
+      </a>
+      <a href="#" class="icon-link">
+        <img src="./images/icon-upload.svg" class="icon-symbol" alt="upload">
+      </a>
+    </div>
   </div>
   <div class="second-element">
     <p>
@@ -39,14 +40,19 @@
     <div class="storage-left">
       <span class="storage-left__number">185</span> GB Left
     </div>
-    <div class="storage-indicator">
+    <div class="storage-left__triangle">
     </div>
-      <div></div>
-      <span class="white-number">0 GB</span>
-      <span class="white-number">1000 GB</span>
+    <div class=" storage-indicator storage-indicator__bg">
+      <div class=" storage-indicator storage-indicator__gradient">
+        <div class="storage-indicator storage-indicator__dot">
+        </div>
+      </div> 
+    </div>
     
-  
-  
+      <div class="storage-indicator__labeling">
+        <span class="white-number">0 GB</span>
+        <span class="white-number">1000 GB</span>
+      </div>  
   </div>
   
 </div>
