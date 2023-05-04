@@ -25,18 +25,29 @@ body {
     background-image: url(./images/bg-desktop.png);
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: 100% 50%;
     color: var(--clr-grayish-blue);
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
+    min-height: 100%;
+}
+
+@media (max-width: 586px) {
+    body {
+        background-image: url(./images/bg-mobile.png);
+        background-size: 100%;
+    }
 }
 
 .container {
-    height: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: end;
     margin: 10rem 0;
 }
+
+
 
 .first-element {
     background-color: var(--clr-dark-blue);
@@ -78,6 +89,7 @@ body {
     padding: var(--padding-elements);
     font-size: 0.75rem;
     width: 33%;
+    min-width: 280px;
     position: relative;
 }
 
@@ -88,7 +100,7 @@ body {
 
 .storage-left {
     background-color: white;
-    border-radius: var(--border-radius-elements) var(--border-radius-elements) 0 var(--border-radius-elements);
+    border-radius: var(--border-radius-elements) ;
     display: inline-flex;
     align-items: center;
     padding: calc(var(--padding-elements)/2);
@@ -96,6 +108,17 @@ body {
     right: var(--padding-elements);
     /*own padding plus font-seize of the .storage-left__number moved upwards*/
     top: calc(calc(calc(var(--padding-elements)/2) + 1.75rem) * -1);
+}
+
+@media (max-width: 586px) {
+    .storage-left {
+        top: calc(calc(calc(var(--padding-elements)/2) + 2.5rem) * 2);
+        right: calc(calc(var(--padding-elements)*0.5) + 25%);
+    }
+
+    .storage-left__triangle {
+        display: none;
+    }
 }
 
 .storage-left__triangle {
